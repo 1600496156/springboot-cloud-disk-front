@@ -4,7 +4,7 @@
       <div class="header-content">
         <div class="logo" @click="jump">
           <span class="iconfont icon-pan"></span>
-          <span class="name">Small云盘</span>
+          <span class="name">云盘系统</span>
         </div>
       </div>
     </div>

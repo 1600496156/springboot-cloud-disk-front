@@ -8,7 +8,7 @@
           :rules="rules"
           ref="formDataRef"
       >
-        <div class="login-title">SmallPan | 云盘</div>
+        <div class="login-title">SmallPan | 云盘系统</div>
         <!--input输入-->
         <el-form-item prop="email">
           <el-input
@@ -135,12 +135,12 @@
         </el-form-item>
         <el-form-item v-if="opType == 1">
           <div class="rememberme-panel">
-            <el-checkbox v-model="formData.rememberMe">记住我</el-checkbox>
-          </div>
-          <div class="no-account">
             <a href="javascript:void(0)" class="a-link" @click="showPanel(2)"
             >忘记密码？</a
             >
+          </div>
+          <div class="no-account">
+
             <a href="javascript:void(0)" class="a-link" @click="showPanel(0)"
             >没有账号？</a
             >
@@ -460,85 +460,121 @@ const qqLogin = async () => {
 
 <style lang="scss" scoped>
 .login-body {
-  height: calc(100vh);
-  background-size: cover;
-  background: url("../assets/login_bg.jpg");
+  height: 100vh;
+  background: url("../assets/background.jpg") center/cover no-repeat;
   display: flex;
-
-  .bg {
-    flex: 1;
-    background-size: cover;
-    background-position: center;
-    background-size: 800px;
-    background-repeat: no-repeat;
-    background-image: url("../assets/login_img.png");
-  }
+  justify-content: center;
+  align-items: center;
 
   .login-panel {
-    width: 430px;
-    margin-right: 15%;
-    margin-top: calc((100vh - 500px) / 2);
+    width: 400px;
+    background: rgba(255, 255, 255, 0.85); /* 半透明背景，增强对比度 */
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+
+    .login-title {
+      font-size: 22px;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 20px;
+    }
 
     .login-register {
-      padding: 25px;
-      background: #fff;
-      border-radius: 5px;
-
-      .login-title {
-        text-align: center;
-        font-size: 18px;
-        font-weight: bold;
-        margin-bottom: 20px;
-      }
-
       .send-emali-panel {
         display: flex;
-        width: 100%;
         justify-content: space-between;
+        margin-bottom: 15px;
 
         .send-mail-btn {
-          margin-left: 5px;
+          background-color: #007FFF;
+          border: none;
+          color: white;
+          padding: 10px 15px;
+          font-size: 14px;
+          border-radius: 5px;
+          transition: background-color 0.3s ease;
+          &:hover {
+            background-color: #007FFF;
+          }
         }
       }
 
       .rememberme-panel {
-        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-top: 10px;
       }
 
       .no-account {
-        width: 100%;
         display: flex;
-        justify-content: space-between;
+        justify-content: right;
+        margin-left: auto;
+
+        .a-link {
+          color: #007FFF;
+          font-size: 14px;
+          text-decoration: none;
+          &:hover {
+            color: #007FFF;
+            text-decoration: underline;
+          }
+        }
       }
 
       .op-btn {
         width: 100%;
+        margin-top: 20px;
+        padding: 12px 0;
+        background-color: #007FFF;
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        &:hover {
+          background-color: #007FFF;
+        }
       }
     }
   }
 
   .check-code-panel {
-    width: 100%;
     display: flex;
+    align-items: center;
+    justify-content: space-between;
 
     .check-code {
-      margin-left: 5px;
+      margin-left: 10px;
       cursor: pointer;
+      border-radius: 5px;
+      transition: transform 0.3s ease;
+      &:hover {
+        transform: scale(1.1);
+      }
     }
   }
 
   .login-btn-qq {
-    margin-top: 20px;
-    text-align: center;
+    margin-top: 30px;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
 
     img {
       cursor: pointer;
-      margin-left: 10px;
-      width: 20px;
+      width: 30px;
+      transition: transform 0.3s ease;
+      &:hover {
+        transform: scale(1.2);
+      }
     }
   }
 }
+
+
 </style>
