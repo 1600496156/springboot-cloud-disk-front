@@ -3,7 +3,7 @@
     <div class="body-content">
       <div class="logo">
         <span class="iconfont icon-pan"></span>
-        <span class="name">Small云盘</span>
+        <span class="name">SmallPan | 云盘系统</span>
       </div>
       <div class="code-panel">
         <div class="file-info">
