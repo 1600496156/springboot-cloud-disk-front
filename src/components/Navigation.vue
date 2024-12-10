@@ -66,7 +66,6 @@ const openFolder = (data) => {
 };
 
 defineExpose({ openFolder, init });
-
 const api = {
   getFolderInfo: "/file/getFolderInfo",
   getFolderInfo4Share: "/showShare/getFolderInfo",
@@ -148,6 +147,7 @@ const getNavigationFolder = async (path) => {
     return;
   }
   folderList.value = result.data;
+
 };
 
 const emit = defineEmits(["navChange"]);
@@ -157,7 +157,6 @@ const doCallback = () => {
     curFolder: currentFolder.value,
   });
 };
-
 watch(
   () => route,
   (newVal, oldVal) => {
