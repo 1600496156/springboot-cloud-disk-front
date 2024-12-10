@@ -22,8 +22,8 @@
                 placeholder="请选择状态"
                 v-model="searchFormData.status"
               >
-                <el-option :value="1" label="启用"></el-option>
-                <el-option :value="0" label="禁用"></el-option>
+                <el-option :value="0" label="启用"></el-option>
+                <el-option :value="1" label="禁用"></el-option>
               </el-select>
             </el-form-item>
           </el-col>
@@ -54,14 +54,14 @@
         </template>
 
         <template #status="{ index, row }">
-          <span v-if="row.status == 1" style="color: #529b2e">启用</span>
-          <span v-if="row.status == 0" style="color: #f56c6c">禁用</span>
+          <span v-if="row.status == 0" style="color: #529b2e">启用</span>
+          <span v-if="row.status == 1" style="color: #f56c6c">禁用</span>
         </template>
         <template #op="{ index, row }">
           <span class="a-link" @click="updateSpace(row)">分配空间</span>
           <el-divider direction="vertical" />
           <span class="a-link" @click="updateUserStatus(row)">{{
-            row.status == 0 ? "启用" : "禁用"
+            row.status == 1 ? "启用" : "禁用"
           }}</span>
         </template>
       </Table>
@@ -180,7 +180,7 @@ const loadDataList = async () => {
 //修改状态
 const updateUserStatus = (row) => {
   proxy.Confirm(
-    `你确定要【${row.status == 0 ? "启动" : "禁用"}】吗？`,
+    `你确定要【${row.status == 1 ? "启动" : "禁用"}】吗？`,
     async () => {
       let result = await proxy.Request({
         url: api.updateUserStatus,
