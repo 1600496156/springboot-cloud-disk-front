@@ -288,7 +288,7 @@ const getEmailCode = () => {
   });
 };
 //发送邮件
-const sendEmailCode = () => {
+const sendEmailCode = async () => {
   formData4SendMailCodeRef.value.validate(async (valid) => {
     if (!valid) {
       return;
@@ -302,9 +302,6 @@ const sendEmailCode = () => {
         changeCheckCode(1);
       },
     });
-    if (!result) {
-      return;
-    }
     proxy.Message.success("验证码发送成功，请登录邮箱查看");
     dialogConfig4SendMailCode.show = false;
   });
@@ -461,7 +458,7 @@ const qqLogin = async () => {
 <style lang="scss" scoped>
 .login-body {
   height: 100vh;
-  background: url("../assets/background.jpg") center/cover no-repeat;
+  background: url("../assets/background2.jpg") center/cover no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;

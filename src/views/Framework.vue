@@ -3,7 +3,7 @@
     <div class="header">
       <div class="logo">
         <span class="iconfont icon-pan"></span>
-        <span class="name">SmallPan云盘</span>
+        <span class="name">SmallPan云盘系统</span>
       </div>
       <div class="right-panel">
         <el-popover

@@ -69,7 +69,7 @@ instance.interceptors.response.use(
         if (error.config.showLoading && loading) {
             loading.close();
         }
-        return Promise.reject({ showError: true, msg: "网络异常" })
+        return Promise.reject({ showError: true, msg: "网络不稳定，请稍后再试" })
     }
 );
 
