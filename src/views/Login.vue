@@ -217,6 +217,7 @@
 <script setup>
 import {ref, reactive, getCurrentInstance, nextTick, onMounted} from "vue";
 import {useRouter, useRoute} from "vue-router";
+import md5 from "js-md5";
 
 const {proxy} = getCurrentInstance();
 const router = useRouter();
@@ -382,9 +383,18 @@ const doSubmit = () => {
     Object.assign(params, formData.value);
     //注册
     if (opType.value == 0 || opType.value == 2) {
-      params.password = params.registerPassword;
+      params.password = md5(params.registerPassword);
       delete params.registerPassword;
       delete params.reRegisterPassword;
+    }
+    //登录
+    if (opType.value == 1) {
+      let cookieLoginInfo = proxy.VueCookies.get("loginInfo");
+      let cookiePassword =
+          cookieLoginInfo == null ? null : cookieLoginInfo.password;
+      if (params.password !== cookiePassword) {
+        params.password = md5(params.password);
+      }
     }
     let url = null;
     if (opType.value == 0) {
