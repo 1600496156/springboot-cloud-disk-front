@@ -23,10 +23,10 @@
           v-model="formData.registerEmailContent"
         ></el-input>
       </el-form-item>
-      <el-form-item label="初始空间大小" prop="userInitUseSpace">
+      <el-form-item label="初始存储空间" prop="userInitUseSpace">
         <el-input
           clearable
-          placeholder="初始空间大小"
+          placeholder="初始存储空间"
           v-model="formData.userInitUseSpace"
         >
           <template #suffix>MB</template>

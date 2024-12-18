@@ -4,7 +4,7 @@
       <div class="header-content">
         <div class="logo" @click="jump">
           <span class="iconfont icon-pan"></span>
-          <span class="name">云盘系统</span>
+          <span class="name">SmallPan云盘系统</span>
         </div>
       </div>
     </div>
@@ -46,7 +46,7 @@
               :disabled="selectFileIdList.length == 0"
               @click="save2MyPan"
               ><span class="iconfont icon-import"></span
-              >保存到我的网盘</el-button
+              >保存到我的云盘</el-button
             >
           </div>
         </div>
@@ -101,7 +101,7 @@
                     <span
                       class="iconfont icon-import"
                       @click="save2MyPanSingle(row)"
-                      >保存到我的网盘</span
+                      >保存到我的云盘</span
                     >
                   </template>
                 </span>
@@ -255,7 +255,7 @@ const download = async (fileId) => {
   window.location.href = api.download + "/" + result.data;
 };
 
-//保存到我的网盘
+//保存到我的云盘
 const folderSelectRef = ref();
 const save2MyPanFileIdArray = [];
 const save2MyPan = () => {

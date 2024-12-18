@@ -1,6 +1,6 @@
 {
   "id": "3946741",
-  "name": "easypan",
+  "name": "smallPan",
   "font_family": "iconfont",
   "css_prefix_text": "icon-",
   "description": "",
@@ -266,7 +266,7 @@
     },
     {
       "icon_id": "34532161",
-      "name": "网盘-copy",
+      "name": "云盘-copy",
       "font_class": "pan",
       "unicode": "e6e2",
       "unicode_decimal": 59106
