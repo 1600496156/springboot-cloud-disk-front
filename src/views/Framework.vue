@@ -245,7 +245,7 @@ const menus = [
     icon: "del",
     name: "回收站",
     menuCode: "recycle",
-    tips: "回收站为你保存10天内删除的文件",
+    tips: "删除回收站的文件才能释放存储空间",
     allShow: true,
     children: [
       {

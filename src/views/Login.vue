@@ -61,11 +61,7 @@
             </div>
             <el-popover placement="left" :width="500" trigger="click">
               <div>
-                <p>1、在垃圾箱中查找邮箱验证码</p>
-                <p>2、在邮箱中头像->设置->反垃圾->白名单->设置邮件地址白名单</p>
-                <p>
-                  3、将邮箱【laoluo@wuhancoder.com】添加到白名单不知道怎么设置？
-                </p>
+                <p>在垃圾箱中查找邮箱验证码</p>
               </div>
               <template #reference>
                 <span class="a-link" :style="{ 'font-size': '14px' }"
