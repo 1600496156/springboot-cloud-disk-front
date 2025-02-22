@@ -241,7 +241,7 @@ const navChange = (data) => {
 //删除文件
 const delFile = (row) => {
   proxy.Confirm(
-    `你确定要删除【${row.fileName}】吗？删除的文件可在10天内通过回收站还原`,
+    `你确定要删除【${row.fileName}】吗？删除的文件可通过回收站还原`,
     async () => {
       let result = await proxy.Request({
         url: api.delFile,
@@ -262,7 +262,7 @@ const delFileBatch = () => {
     return;
   }
   proxy.Confirm(
-    `你确定要删除这些文件吗？删除的文件可在10天内通过回收站还原`,
+    `你确定要删除这些文件吗？删除的文件可通过回收站还原`,
     async () => {
       let result = await proxy.Request({
         url: api.delFile,
