@@ -8,7 +8,7 @@
           :rules="rules"
           ref="formDataRef"
       >
-        <div class="login-title">SmallPan | 云盘系统</div>
+        <div class="login-title">云盘系统</div>
         <!--input输入-->
         <el-form-item prop="email">
           <el-input
