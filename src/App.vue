@@ -6,7 +6,6 @@
 
 <script setup>
 import { reactive } from "vue";
-import framework from "@/views/Framework.vue";
 import zhCn from "element-plus/es/locale/lang/zh-cn";
 const locale = zhCn;
 const config = reactive({
