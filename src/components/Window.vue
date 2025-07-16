@@ -12,7 +12,7 @@
         width: windowContentWidth + 'px',
       }">
       <div class="title">
-        {{ title }}
+        {{ title }} - 黑屏表示正在加载视频中
       </div>
       <div class="content-body" :style="{ 'align-items': align }">
         <slot></slot>
